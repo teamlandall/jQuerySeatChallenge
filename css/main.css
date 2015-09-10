@@ -1,9 +1,18 @@
+
 .container {
 	max-width: 800px;
 }
+.col-xs-12 {
+	margin: 30px 0px;
+	text-align: center;
+	font-family:"impact";
+	display: inline-block;
+	text-decoration: underline;
+}
 
 .btn-primary{
-	margin: 5% 24%;
+	margin: 10% 24%;
+	font-family:"arial";
 }
 
 #seat-form {
@@ -11,3 +20,13 @@
 	margin: 40px;
 	width: 50%;
 }
+
+img {
+	width: 10%;
+}
+
+footer {
+	text-align: center;
+	margin-top: 50px;
+}
+
