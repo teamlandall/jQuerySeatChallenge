@@ -9,9 +9,23 @@ $(document).ready(function() {
            $("#seat-form")[0].reset();
         } else {
            $("#seat-form").show();
-        }
+        } 
+
+        ////////////////////////////////////////
+            $(".btn").each(function(){
+                $(".btn").attr("disabled", "disabled");
+            });
+            $(this).removeAttr("disabled", "disbaled");
+            $("#submit").removeAttr("disabled", "disbaled");
+            
+        
+
+
+        /////////////////////////////////////////
+
         return false;
      });
+
 
      $("#submit").click(function(){
         $('#active').addClass('btn-danger').attr('disabled', 'disabled');
