@@ -10,30 +10,27 @@ $(document).ready(function() {
         } else {
            $("#seat-form").show();
         } 
-
-        ////////////////////////////////////////
-            $(".btn").each(function(){
-                $(".btn").attr("disabled", "disabled");
+          $(".btn-sm").each(function(){
+              $(".btn-sm").attr("disabled", "disabled");
             });
-            $(this).removeAttr("disabled", "disbaled");
-            $("#submit").removeAttr("disabled", "disbaled");
-            
-        
-
-
-        /////////////////////////////////////////
-
+            $(this).removeAttr("disabled", "disabled");
         return false;
-     });
+      });
 
 
      $("#submit").click(function(){
-        $('#active').addClass('btn-danger').attr('disabled', 'disabled');
-        $('#active').text('Reserved');
-        // $('.active').removeClass('btn btn-primary btn-sm').addClass('btn btn-danger btn-sm');   
+        $(this).removeAttr('id', 'active');
+        $('#active').addClass('btn-danger').text('Reserved'); 
+          
+        $(".btn-sm").each(function(){
+          $(".btn-sm").removeAttr("disabled", "disabled");
+          });
+
+        $('#active').attr("disabled", "disabled");
         $('#submit').addClass('btn btn-default');
      });
 
 
 });
+
 
