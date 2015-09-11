@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  var $name = $('#name');
+
 	// display form
   $(".btn").click(function(){
     $(this).attr('id', 'active');
@@ -11,27 +13,28 @@ $(document).ready(function() {
     event.preventDefault();
     $(this).removeAttr('id', 'active');
     $('#seat-form').slideUp();
-    $('#active').addClass('btn-danger').text('Reserved');
-        
-        //below uses replace with to inject new html with danger class for color.
-        // $('#active').replaceWith('<button type="button" class="btn btn-primary btn-sm btn-danger">Reserved</button>'); 
+    $('#active').addClass('btn-danger');
 
-        //this doens't work. figure this out.
-        $("button").each(function(){
-          if($('button').class() !== 'reserved'){
-            $('.btn-sm').removeAttr('disabled', 'disabled');
-          } else{
-            $('.btn-sm').attr('disabled', 'disabled');
-          }
-        });
-
-    $('#active').removeAttr("id", "active");
+    //captures name and displays on reserved seat
+    //potentially hide and use hover? 
+    var name = $name.val();
+    $('#active').text(name);
+    //changes id=active to class=resereved and disables for future use
+    $('#active').removeAttr("id", "active").addClass("reserved");
+    $('.reserved').attr("disabled", "disabled");
     $('#submit').addClass('btn btn-default');
-    });
+  });
+
+  //Should possibly create a new function to handle the name capture and call in the 
+  //submit function.
 
 });
  
 
+// Stories to accomplish - 
 
+// 1) Allow multiple seat selections for 'group reservations'
+// 2) Change display to look more like an actual theater. Add more seats.
+// 3) Need to clear the name field each time submit is pressed.
 
 
