@@ -36,5 +36,6 @@ $(document).ready(function() {
 // 1) Allow multiple seat selections for 'group reservations'
 // 2) Change display to look more like an actual theater. Add more seats.
 // 3) Need to clear the name field each time submit is pressed.
+// 4) Add jQuery plug in tubular of a movie theater walk through? 
 
 
